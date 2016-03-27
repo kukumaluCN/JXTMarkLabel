@@ -66,14 +66,14 @@
 {
     CGPoint pt = [sender translationInView:self];
     
-    CGPoint midCenter = _clipView.center;
-    CGPoint labelCenter = _showView.center;
+    CGPoint clipCenter = _clipView.center;
+    CGPoint showCenter = _showView.center;
     
-    midCenter.x   += pt.x;
-    labelCenter.x -= pt.x; //退行
+    clipCenter.x += pt.x;
+    showCenter.x -= pt.x; //退行
     
-    _clipView.center = midCenter;
-    _showView.center = labelCenter;
+    _clipView.center = clipCenter;
+    _showView.center = showCenter;
     
     [sender setTranslation:CGPointZero inView:self];
 }
